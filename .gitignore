@@ -1,3 +1,6 @@
+#default python folders
 **/__pycache__/
-
 trade_env
+app/db/trade.db
+migrations/*
+!migrations/README
