@@ -1,9 +1,11 @@
 from app import sqlAlchemyInstance as db
 from flask import json, request, jsonify
-from ..models.symbol import Symbol, SymbolSchema
+from ..models.symbol import Symbol
+from ..models.schema.symbolSchema import SymbolSchema
 
 
 class CreateSymbolService():
+    
     def postSymbol(self):
         symbol = Symbol("POSI3F","BMFBOVESPA", "BRAZIL","4h")
         db.session.add(symbol)

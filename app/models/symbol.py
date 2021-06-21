@@ -9,6 +9,10 @@ class Symbol(db.Model):
     lastUpdate=db.Column(db.DateTime, nullable=True)
     recommendation=db.Column(db.String,  nullable=True)
     active = db.Column(db.Boolean, nullable = True)
+
+
+
+
     def __init__(self, symbol, exchange, screener, interval, lastUpdate = None, recommendation = None):
         self.symbol  = symbol
         self.exchange = exchange
@@ -17,9 +21,8 @@ class Symbol(db.Model):
         self.lastUpdate = lastUpdate
         self.recommendation = recommendation
 
-class SymbolSchema(ma.SQLAlchemyAutoSchema):
-    class Meta:
-        model = Symbol
+
+
 
 # outra opção        
 # class SymbolSchema(ma.Schema):
