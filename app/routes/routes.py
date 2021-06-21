@@ -5,6 +5,7 @@ from ..models.symbol import Symbol
 from flask import Flask, jsonify
 from ..services.createSymbolService import CreateSymbolService
 from ..services.listSymbolService import ListSymbolService
+from ..services.deleteSymbolService import DeleteSymbolService
 
 @app.route('/',methods=['GET'])
 def root():
@@ -17,6 +18,15 @@ def postSymbol():
 
 @app.route('/symbol', methods=['GET'])
 def listSymbol():
-    print("algo")
     list = ListSymbolService()
-    return list.getSymbols()
+    return list.listSymbols()
+
+@app.route('/symbol/<id>', methods=['GET'])
+def getSymbol(id):
+    list = ListSymbolService()
+    return list.getSymbol(id)
+
+@app.route('/symbol/<id>', methods=['DELETE'])
+def deleteSymbol(id):
+    deleteSymbolService = DeleteSymbolService()
+    return deleteSymbolService.deleteSymbol(id)
