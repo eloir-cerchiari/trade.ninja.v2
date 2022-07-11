@@ -1,6 +1,6 @@
 # trade.ninja
 
-_Atualemente ainda esta __Em Desenvolvimento__, não use para investir o seu dinheiro_
+_Atualmente ainda esta __Em Desenvolvimento__, não use para investir o seu dinheiro_
 
 Projeto com o intuito de Aprendizagem da Linguagem Python, juntamento com o framework flask.
 
